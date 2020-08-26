@@ -119,7 +119,7 @@ void buttonInit(void){
 
 void motorInit(void){
 	//Motor PWM setup
-	TIM4->CCER 		|= TIM_CCER_CC1E | TIM_CCER_CC2E | TIM_CCER_CC3E | TIM_CCER_CC4E;																			// Timer enable CH1, PB6
+	TIM4->CCER 		|= TIM_CCER_CC1E;																																											// Timer enable CH1, PD12
 	TIM4->PSC		   = 160 - 1;
 	TIM4->ARR 		 = 100;
 	TIM4->CCR1 		 = 50;																																																// PWM CH
